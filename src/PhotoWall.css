@@ -1,0 +1,20 @@
+.photo-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+    background-color: #f0f0f0;
+}
+
+.pic {
+    width: 40em;
+}
+
+.stanza {
+    color: #9a0404;
+    font-size: 2.5em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Light shadow */
+}
