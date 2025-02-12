@@ -21,7 +21,7 @@ body {
 
 .floating-petal {
     position: absolute;
-    background-color: rgb(207, 71, 71);
+    background-color: #ff2644;
     border-radius: 50%;
     opacity: 0.9;
     z-index: -10;

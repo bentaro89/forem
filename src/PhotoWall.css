@@ -8,13 +8,20 @@
 
 .pic {
     width: 40em;
+    border-radius: 5em;
+
+}
+
+.stanza-container {
+    background-color: #141416;
+    border-radius: 5em;
 }
 
 .stanza {
-    color: #9a0404;
-    font-size: 2.5em;
+    color: #be1f1f;
+    font-size: 3em;
     font-family: 'Dancing Script', cursive;
-    font-weight: bolder;
+    font-weight: 800;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     /* Light shadow */
 }

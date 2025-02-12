@@ -28,9 +28,13 @@ const PhotoWall = () => {
                         <img className="pic" key={i} src={photo} alt={'pic'} />
                         {
                             // loop through the stanzas and display each line
-                            stanzas[i].map((stanza) => (
-                                <p className='stanza'>{stanza}</p>
-                            ))
+                            <div className='stanza-container'>
+                                {
+                                    stanzas[i].map((stanza) => (
+                                        <p className='stanza'>{stanza}</p>
+                                    ))
+                                }
+                            </div>
                         }
                     </div>
                 ))
