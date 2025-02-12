@@ -1,29 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./RoseAnimation.css";
 
 const RoseAnimation = () => {
+    const [petals, setPetals] = useState([]);
 
-    const createFloatingPetals = () => {
-        return Array.from({ length: 50 }).map((_, i) => (
-            <div
-                key={i}
-                className="floating-petal"
-                style={{
-                    left: `${0.1 + Math.random() * 100}vw`, // Horizontal movement based on scroll position
-                    top: `${Math.random() * 100}vh`, // Random vertical position within the viewport
-                    transform: `scale(${Math.random() * 0.7 + 0.8}) rotate(${Math.random() * 720}deg)`, // Random rotation for floating petals
-                    width: "60px",
-                    height: "30px",
-                    borderRadius: "50% 50% 50% 50% / 70% 70% 30% 30%",
-                    animation: "movePetals 20s linear infinite", // Adjust the animation duration as needed
-                }}
-            ></div>
-        ));
-    };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setPetals((prevPetals) => [
+                ...prevPetals,
+                {
+                    id: prevPetals.length,
+                    style: {
+                        left: `${0.1 + Math.random() * 100}vw`,
+                        top: `-30px`, // Start from above the viewport to simulate continuous spawning
+                        transform: `scale(${Math.random() * 0.7 + 0.8}) rotate(${Math.random() * 720}deg)`,
+                    },
+                },
+            ]);
+        }, 300); // Petals will spawn every 300ms
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
 
     return (
         <div>
-            {createFloatingPetals()}
+            {petals.map((petal) => (
+                <div
+                    key={petal.id}
+                    className="floating-petal"
+                    style={{
+                        ...petal.style,
+                        width: "60px",
+                        height: "30px",
+                        borderRadius: "50% 50% 50% 50% / 70% 70% 30% 30%",
+                        animation: "movePetals 90s linear infinite",
+                    }}
+                ></div>
+            ))}
         </div>
     );
 };
