@@ -14,7 +14,7 @@ body {
     }
 
     to {
-        transform: translateY(200px) scale(1.5);
+        transform: translateY(100vh) scale(1.5);
         opacity: 1;
     }
 }
@@ -24,6 +24,5 @@ body {
     background-color: rgb(207, 71, 71);
     border-radius: 50%;
     opacity: 0.9;
-    animation: movePetals 5s linear infinite;
     z-index: -10;
 }
