@@ -33,7 +33,7 @@ const RoseAnimation = () => {
                         width: "60px",
                         height: "30px",
                         borderRadius: "50% 50% 50% 50% / 70% 70% 30% 30%",
-                        animation: "movePetals 80s linear infinite",
+                        animation: "movePetals 50s linear infinite",
                     }}
                 ></div>
             ))}

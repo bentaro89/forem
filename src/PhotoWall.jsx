@@ -15,7 +15,8 @@ const PhotoWall = () => {
     const photos = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9];
     const stanzas = [
         [
-            "Hi Manchun, it's your elf"
+            "Hi Manchun, it's your elf",
+            "Click once and scroll down please :)",
         ],
         [
             "June 29th, 2024 was a day thought normal",
