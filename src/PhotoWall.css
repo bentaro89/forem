@@ -1,5 +1,5 @@
 .photo-wall {
-    /* padding-top: 500em; */
+    padding-top: 5em;
     display: flex;
     flex-direction: column;
     grid-gap: 1em;
@@ -25,4 +25,8 @@
     font-weight: 800;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     /* Light shadow */
+}
+
+.buttons {
+    margin: 4em;
 }
