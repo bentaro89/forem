@@ -17,7 +17,7 @@ const RoseAnimation = () => {
                     },
                 },
             ]);
-        }, 500); // Petals will spawn every xms
+        }, 800); // Petals will spawn every xms
 
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []);
