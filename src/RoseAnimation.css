@@ -13,7 +13,7 @@ body {
     }
 
     to {
-        transform: translateY(820vh) scale(1.5);
+        transform: translateY(1000vh) scale(1.5);
         opacity: 1;
     }
 }
